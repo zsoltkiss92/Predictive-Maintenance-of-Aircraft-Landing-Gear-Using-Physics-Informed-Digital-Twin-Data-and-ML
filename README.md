@@ -1,9 +1,8 @@
-# Predictive Maintenance of Aircraft Landing Gear  
-## Physics-Informed Digital Twin Data and Machine Learning
+#Capstone Project, City University of Seattle – MSAI  
+#Course: AI687
 
-Capstone Project  
-City University of Seattle – MSAI  
-Course: AI687
+## Predictive Maintenance of Aircraft Landing Gear  
+## Using Physics-Informed Digital Twin Data and Machine Learning
 
 ---
 
