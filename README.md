@@ -76,6 +76,8 @@ Both datasets are published by the same author, sourced from the same Dornier 22
 │   └── raw/                        # Dataset CSVs (not redistributed)
 ├── notebooks/
 │   └── 01_data_exploration.ipynb   # EDA and feature analysis
+    └── 02_classification_comparison.ipynb
+    └── 03_RUL_regression.ipynb
 ├── src/                            # Preprocessing, training, and evaluation scripts
 ├── outputs/                        # Model results, figures, evaluation metrics
 ├── paper/                          # Capstone paper drafts (Week 5, Week 6)
