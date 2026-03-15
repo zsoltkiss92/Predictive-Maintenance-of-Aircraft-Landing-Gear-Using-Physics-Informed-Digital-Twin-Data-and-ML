@@ -49,7 +49,6 @@ Both datasets are published by the same author, sourced from the same Dornier 22
 **Models**
 - Random Forest Classifier / Regressor
 - XGBoost Classifier / Regressor
-- Logistic Regression (baseline, classification only)
 
 **Training Strategy**
 - Hold-out train/test split at event level
