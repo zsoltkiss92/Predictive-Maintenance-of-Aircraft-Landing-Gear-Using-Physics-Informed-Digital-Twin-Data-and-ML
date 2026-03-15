@@ -81,8 +81,8 @@ Both datasets are published by the same author, sourced from the same Dornier 22
 │   └── raw/                        # Dataset CSVs (not redistributed)
 ├── notebooks/
 │   └── 01_data_exploration.ipynb   # EDA and feature analysis
-    └── 02_classification_comparison.ipynb
-    └── 03_RUL_regression.ipynb
+    └── 02_classification_comparison.ipynb # classification models for fault classes
+    └── 03_RUL_regression.ipynb # regression versions of same models
 └── LICENSE
 └── README.md
 └── requirements.txt
