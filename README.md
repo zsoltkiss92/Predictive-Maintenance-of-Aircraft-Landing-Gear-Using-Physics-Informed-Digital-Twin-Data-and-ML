@@ -3,7 +3,7 @@
 ## Predictive Maintenance of Aircraft Landing Gear Using Physics-Informed Digital Twin Data and Machine Learning
 ---
 ## Abstract
-This capstone project investigates predictive maintenance of aircraft landing gear using physics-informed digital twin data and machine learning techniques. The study builds on a high-fidelity digital twin framework that generated simulated landing events under multiple fault conditions. Tree-based ensemble learning methods are employed due to their suitability for structured, event-level data. Random Forest and XGBoost models are applied for multi-class fault diagnosis, while regression variants of the same models are used for remaining useful life (RUL) prediction. The results demonstrate that physics-informed features combined with ensemble learning models can effectively support fault identification and RUL estimation, highlighting the feasibility of condition-based maintenance strategies for aircraft landing gear systems and other safety-critical components.
+This capstone project investigates predictive maintenance of aircraft landing gear using physics-informed digital twin data and machine learning. The study builds on a high-fidelity digital twin framework that generated simulated landing events under four fault conditions. Tree-based ensemble methods — Random Forest and XGBoost — are applied for multi-class fault diagnosis and remaining useful life (RUL) regression. Within-dataset results are strong: both classifiers exceed 99% accuracy (macro F1 > 0.99), and RUL regressors achieve a mean absolute error of approximately 1.15 percentage points of remaining service life. Cross-dataset evaluation on the AEROTWIN external dataset reveals a sharp generalization failure, with macro F1 dropping to 0.25–0.39, attributable to parameter range shift between simulation configurations. This finding challenges the assumption of model portability across digital twin datasets and highlights distributional shift as a critical risk in condition-based maintenance deployment for safety-critical aviation systems.
 
 **Keywords:** machine learning, predictive maintenance, digital twin, fault diagnosis, remaining useful life
 
@@ -67,7 +67,12 @@ Both datasets are published by the same author, sourced from the same Dornier 22
 
 ---
 ## Key Findings
-*To be completed upon model evaluation.*
+
+**Fault classification (primary dataset):** Random Forest achieved 99.3% accuracy and macro F1 of 0.993; XGBoost reached 99.0% accuracy and macro F1 of 0.990. Both models classified all fault classes near-perfectly, with the only misclassifications occurring in the Normal Operation class.
+
+**RUL regression (primary dataset):** Both regressors performed similarly — Random Forest MAE 1.154 pp, RMSE 2.293 pp; XGBoost MAE 1.160 pp, RMSE 2.356 pp. Predictions are on average within ~1.15 percentage points of total service life, which is operationally acceptable for maintenance planning.
+
+**Cross-dataset generalization (AEROTWIN):** Performance collapsed substantially. Random Forest dropped to 39% accuracy (macro F1 0.25); XGBoost to 48% (macro F1 0.39). The primary driver is parameter range shift: AEROTWIN covers substantially broader mass, stiffness, damping, and sink-rate ranges than the primary dataset, invalidating the learned decision boundaries.
 
 ---
 ## Repository Structure
